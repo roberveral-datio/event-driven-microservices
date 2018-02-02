@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>notification-service</artifactId>
+
+    <parent>
+        <artifactId>event-driven-microservices</artifactId>
+        <groupId>com.datio.eda</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <properties>
+        <scala.version>2.12.4</scala.version>
+        <scala.binary.version>2.12</scala.binary.version>
+        <akka.version>2.5.6</akka.version>
+        <play.version>2.6.7</play.version>
+        <slick.version>3.2.1</slick.version>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>${scala.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.datio.eda</groupId>
+            <artifactId>schema</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-stream_${scala.binary.version}</artifactId>
+            <version>${akka.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-stream-kafka_${scala.binary.version}</artifactId>
+            <version>0.18</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.confluent</groupId>
+            <artifactId>kafka-avro-serializer</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.typesafe.play</groupId>
+            <artifactId>play-ahc-ws_${scala.binary.version}</artifactId>
+            <version>${play.version}</version>
+        </dependency>
+
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>confluent</id>
+            <url>http://packages.confluent.io/maven/</url>
+        </repository>
+    </repositories>
+
+</project>

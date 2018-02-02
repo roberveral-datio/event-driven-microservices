@@ -1,0 +1,13 @@
+{
+    "namespace": "com.datio.eda",
+    "type": "record",
+    "name": "UserCreated",
+    "fields": [
+        {"name": "id", "type": "long"},
+        {"name": "firstName", "type": "string"},
+        {"name": "lastName", "type": "string"},
+        {"name": "age", "type": "int"},
+        {"name": "email",  "type": "string"},
+        {"name": "timestamp", "type": "long"}
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "namespace": "com.datio.eda",
+    "type": "record",
+    "name": "UserNotified",
+    "fields": [
+        {"name": "id", "type": "long"},
+        {"name": "timestamp", "type": "long"}
+    ]
+}
