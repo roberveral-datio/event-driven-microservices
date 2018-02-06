@@ -5,6 +5,14 @@ import java.util.Properties
 import com.typesafe.config.Config
 
 trait ConfigUtils {
+
+  /**
+    * Converts a Typesafe Config object into Java Properties.
+    *
+    * @param config config to convert.
+    * @return properties containing all the keys and values of
+    *         the given config.
+    */
   def propsFromConfig(config: Config): Properties = {
     import scala.collection.JavaConverters._
 
