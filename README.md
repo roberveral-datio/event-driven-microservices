@@ -25,7 +25,13 @@ docker-compose up
 
 ### Run the services
 
-You can then run the services from an IDE.
+You can then run the services:
+
+```sh
+mvn package
+mvn scala:run -pl user-service
+mvn scala:run -pl notification-service
+```
 
 > *NOTE:* don't forget to configure the Slack Webhook in the `notification-service/src/main/resources/application.conf`.
 

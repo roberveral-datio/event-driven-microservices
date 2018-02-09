@@ -98,6 +98,39 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <plugins>
+            <!-- compilador de scala -->
+            <plugin>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>scala-maven-plugin</artifactId>
+                <version>3.3.1</version>
+                <configuration>
+                    <checkMultipleScalaVersions>false</checkMultipleScalaVersions>
+                    <recompileMode>modified-only</recompileMode>
+                    <launchers>
+                        <launcher>
+                            <id>user-service</id>
+                            <mainClass>com.datio.eda.users.Main</mainClass>
+                        </launcher>
+                    </launchers>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>default</id>
+                        <goals>
+                            <goal>add-source</goal>
+                            <goal>compile</goal>
+                            <goal>testCompile</goal>
+                            <goal>doc</goal>
+                            <goal>doc-jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
     <repositories>
         <repository>
             <id>confluent</id>
